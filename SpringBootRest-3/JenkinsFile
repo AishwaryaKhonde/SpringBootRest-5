@@ -12,5 +12,25 @@ pipeline {
                   echo "Building ${env.project1}..."
             }
         }
+        stage('Upload War To Nexus'){
+            steps{
+                nexusArtifactUploader artifacts:[
+                   [
+                        artifactId: 'RegisterPage',
+                       classifier: '',
+                       file: '/var/lib/jenkins/jobs/grocery-app/config.xml',
+                      type: 'war'
+                 ]
+             ],
+                   credentialsId: 'ccb50510-5095-40e0-829c-e64b800478a6',
+                   groupId: 'grocery',
+                   nexusUrl: '65.2.61.50:8081',
+                   nexusVersion: 'nexus3',
+                   protocol: 'http',
+                   repository: 'maven-snapshots',
+                   version: '1.0-SNAPSHOT'
+  
+            }
         }
-        }
+    }
+ }
