@@ -22,9 +22,9 @@ pipeline {
                       type: 'war'
                  ]
              ],
-                   credentialsId: 'ccb50510-5095-40e0-829c-e64b800478a6',
+                   credentialsId: 'grocery',
                    groupId: 'grocery',
-                   nexusUrl: '65.2.61.50:8081',
+                   nexusUrl: '3.218.130.81:8081',
                    nexusVersion: 'nexus3',
                    protocol: 'http',
                    repository: 'maven-snapshots',
