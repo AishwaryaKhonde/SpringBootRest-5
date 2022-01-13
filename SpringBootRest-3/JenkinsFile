@@ -24,7 +24,7 @@ pipeline {
              ],
                    credentialsId: 'grocery',
                    groupId: 'grocery',
-                   nexusUrl: '3.218.130.81:8081',
+                   nexusUrl: '44.201.133.181:8081',
                    nexusVersion: 'nexus3',
                    protocol: 'http',
                    repository: 'maven-snapshots',
